@@ -56,6 +56,7 @@
     <v-content>
       <v-container>
         <nuxt />
+        <visits/>
       </v-container>
     </v-content>
     <v-navigation-drawer
@@ -80,6 +81,7 @@
 </template>
 
 <script>
+  import Visits from '~/components/Visits'
   export default {
     data () {
       return {
@@ -88,13 +90,20 @@
         fixed: false,
         items: [
           { icon: 'apps', title: 'Welcome', to: '/' },
-          { icon: 'bubble_chart', title: 'Inspire', to: '/inspire' }
+          { icon: 'bubble_chart', title: 'Inspire', to: '/inspire' },
+          { icon: 'info', title: 'Caroussel', to: '/carousel' },
+          { icon: 'apps', title: 'Ma page', to: '/mapage' },
+          { icon: 'bubble_chart', title: 'About', to: '/about' },
+          { icon: 'info', title: 'mini toastr', to: '/minitoastr' },
+          { icon: 'apps', title: 'Index users', to: '/users' },
+          { icon: 'bubble_chart', title: 'Visits', to: '/:slug?' }
         ],
         miniVariant: false,
         right: true,
         rightDrawer: false,
         title: 'Vuetify.js'
       }
-    }
+    },
+    components: {Visits}
   }
 </script>
