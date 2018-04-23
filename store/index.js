@@ -1,16 +1,18 @@
+import Vuex from 'vuex'
+
+import mutations from './mutations'
+
 export const state = () => ({
   sidebar: false,
-  visits: []
+  visits: [],
+  counter: 0
 })
 
-export const mutations = {
-  toggleSidebar (state) {
-    state.sidebar = !state.sidebar
-  },
-  ADD_VISIT (state, path) {
-    state.visits.push({
-      path,
-      date: new Date().toJSON()
-    })
-  }
+const createStore = () => {
+  return new Vuex.Store({
+    state,
+    mutations
+  })
 }
+
+export default createStore

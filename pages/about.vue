@@ -2,6 +2,10 @@
   <div class="container">
     <img :src="thumbnailUrl" />
     <p><nuxt-link to="/">Home</nuxt-link> - About</p>
+    <p>
+      <button @click="$store.commit('increment')">{{ $store.state.counter }}</button><br>
+      <nuxt-link to="/">Home</nuxt-link>
+    </p>
   </div>
 </template>
 
