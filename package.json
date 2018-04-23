@@ -11,9 +11,10 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "ajv": "^6.0.0",
     "axios": "^0.18.0",
     "mini-toastr": "^0.8.1",
-    "nuxt": "^1.0.0",
+    "nuxt": "^1.4.0",
     "vue-notifications": "^0.9.0",
     "vuetify": "^1.0.0"
   },
@@ -22,7 +23,7 @@
     "babel-plugin-transform-imports": "^1.4.1",
     "eslint": "^4.3.0",
     "eslint-config-standard": "^10.2.1",
-    "eslint-loader": "^1.9.0",
+    "eslint-loader": "^2.0.0",
     "eslint-plugin-html": "^3.1.1",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-node": "^5.1.1",
