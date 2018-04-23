@@ -1,30 +1,4 @@
-<template>
-  <div class="container">
-    <img :src="thumbnailUrl" />
-    <p><nuxt-link to="/">Home</nuxt-link> - About</p>
-    <p>
-      <button @click="$store.commit('increment')">{{ $store.state.counter }}</button><br>
-      <nuxt-link to="/">Home</nuxt-link>
-    </p>
-  </div>
-</template>
-
 <script>
-import axios from 'axios'
-
-export default {
-  transition: 'bounce',
-  asyncData () {
-    const nb = Math.max(1, Math.round(Math.random() * 10))
-    return axios.get(`https://jsonplaceholder.typicode.com/photos/${nb}`).then(res => res.data)
-  }
-}
+import About from '~/pages/_lang/about'
+export default About
 </script>
-
-<style>
-.container {
-  text-align: center;
-  padding-top: 100px;
-  font-family: sans-serif;
-}
-</style>

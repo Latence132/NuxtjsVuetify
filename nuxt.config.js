@@ -17,9 +17,9 @@ module.exports = {
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' }
     ]
   },
-  plugins: ['~/plugins/vuetify.js',{ src: '~/plugins/vue-notifications.js', ssr: false }],
+  plugins: ['~/plugins/vuetify.js', { src: '~/plugins/vue-notifications.js', ssr: false }, '~/plugins/i18n.js'],
   css: [
-    '~/assets/style/app.styl','~/assets/main.css'
+    '~/assets/style/app.styl', '~/assets/main.css'
   ],
   /*
   ** Customize the progress bar color
@@ -65,6 +65,9 @@ module.exports = {
     }
   },
   router: {
-    middleware: ['visits', 'user-agent']
+    middleware: ['visits', 'user-agent', 'i18n']
+  },
+  generate: {
+    routes: ['/', '/about', '/fr', '/fr/about']
   }
 }
