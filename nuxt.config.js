@@ -19,7 +19,7 @@ module.exports = {
   },
   plugins: ['~/plugins/vuetify.js',{ src: '~/plugins/vue-notifications.js', ssr: false }],
   css: [
-    '~/assets/style/app.styl'
+    '~/assets/style/app.styl','~/assets/main.css'
   ],
   /*
   ** Customize the progress bar color

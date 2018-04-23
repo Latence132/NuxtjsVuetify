@@ -6,6 +6,7 @@
         <nuxt-link :to="'/users/'+user.id">{{ user.name }}</nuxt-link>
       </li>
     </ul>
+    <p><nuxt-link to="/about">About page</nuxt-link></p>
   </div>
 </template>
 

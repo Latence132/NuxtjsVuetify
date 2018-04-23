@@ -9,6 +9,7 @@
 import axios from 'axios'
 
 export default {
+  transition: 'bounce',
   asyncData () {
     const nb = Math.max(1, Math.round(Math.random() * 10))
     return axios.get(`https://jsonplaceholder.typicode.com/photos/${nb}`).then(res => res.data)
